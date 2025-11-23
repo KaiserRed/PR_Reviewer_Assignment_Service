@@ -7,8 +7,8 @@ RUN go mod download
 
 COPY . .
 
-RUN CGO_ENABLED=0 GOOS=linux go build -o reviewmate-service ./cmd/review-assignment
+RUN CGO_ENABLED=0 GOOS=linux go build -o pr-review-assignment-service ./cmd/review-assignment
 
 EXPOSE 8080
 
-CMD ["./reviewmate-service"]
+CMD ["./pr-review-assignment-service"]

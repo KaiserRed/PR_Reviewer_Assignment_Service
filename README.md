@@ -16,8 +16,13 @@
 ```
 docker-compose up --build
 ```
+Или через
 
-3. Остановка
+```
+docker-compose up -d
+```
+
+3. Остановка сервиса
 
 ```
 docker-compose down -v

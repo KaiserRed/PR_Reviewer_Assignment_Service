@@ -26,7 +26,6 @@ func NewPRHandler(storage *storage.Storage, log *slog.Logger) *PRHandler {
 	}
 }
 
-// CreatePR создает PR с автоматическим назначением ревьюеров
 func (h *PRHandler) CreatePR(c *gin.Context) {
 	const op = "handlers.pr.CreatePR"
 

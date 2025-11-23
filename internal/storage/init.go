@@ -58,7 +58,6 @@ func (s *Storage) Init() error {
 		return fmt.Errorf("%s: %w", op, err)
 	}
 
-	// Создаём индексы
 	_, err = s.db.Exec(`
 		CREATE INDEX IF NOT EXISTS idx_users_team ON users(team_name);
 		CREATE INDEX IF NOT EXISTS idx_users_active ON users(team_name, is_active);
